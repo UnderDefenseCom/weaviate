@@ -15,3 +15,9 @@ scrape_configs:
     sample_limit: 0
     static_configs:
       - targets: ['weaviate:2112']
+  - job_name: node_exporter
+    honor_labels: false
+    honor_timestamps: true
+    sample_limit: 0
+    static_configs:
+      - targets: [ '172.17.0.1:9100' ]
