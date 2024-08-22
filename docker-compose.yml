@@ -25,5 +25,12 @@ services:
       CLUSTER_HOSTNAME: 'node1'
       ASYNC_INDEXING: 'true'
 #      LOG_LEVEL: debug
+  prometheus:
+    image: bitnami/prometheus:2.54.0
+    restart: always
+    volumes:
+      - ./prometheus/prometheus.yml:/opt/bitnami/prometheus/conf/prometheus.yml
+      - prometheus_data:/prometheus
 volumes:
   weaviate_data:
+  prometheus_data:
