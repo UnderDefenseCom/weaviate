@@ -1,0 +1,10 @@
+### GET
+GET {{metrics}}/metrics
+
+### GET
+GET {{host}}/v1/schema
+Content-Type: application/json
+
+### GET
+GET {{host}}/v1/schema/Alerts_DEV/tenants
+Content-Type: application/json
