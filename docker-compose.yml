@@ -24,6 +24,7 @@ services:
       ENABLE_MODULES: 'text2vec-aws,text2vec-cohere,text2vec-huggingface,text2vec-palm,text2vec-openai,generative-openai,generative-cohere,generative-palm,ref2vec-centroid,reranker-cohere,qna-openai'
       CLUSTER_HOSTNAME: 'node1'
       ASYNC_INDEXING: 'true'
+      PERSISTENCE_LSM_ACCESS_STRATEGY: pread
 #      LOG_LEVEL: debug
   prometheus:
     image: bitnami/prometheus:2.54.0
